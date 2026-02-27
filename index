@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — DenivMax</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      background: #0a0a10;
+      color: #e8e8f0;
+      line-height: 1.7;
+      padding: 0 20px;
+    }
+
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 60px 0 100px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 50px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #FF8C00, #FF5500);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 20px rgba(255,140,0,0.4);
+    }
+
+    .app-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .date {
+      color: rgba(255,255,255,0.4);
+      font-size: 15px;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #FF8C00;
+      margin-bottom: 14px;
+      padding-left: 14px;
+      border-left: 3px solid #FF8C00;
+    }
+
+    p {
+      color: rgba(255,255,255,0.72);
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      color: rgba(255,255,255,0.72);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    /* Card highlight */
+    .highlight {
+      background: rgba(255,140,0,0.07);
+      border: 1px solid rgba(255,140,0,0.2);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .highlight p {
+      color: rgba(255,255,255,0.85);
+      margin: 0;
+    }
+
+    /* Contact */
+    .contact-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 24px 28px;
+    }
+
+    .contact-card a {
+      color: #FF8C00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      text-align: center;
+      color: rgba(255,255,255,0.25);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="logo-row">
+        <div class="app-icon">🏔️</div>
+        <div class="app-name">DenivMax</div>
+      </div>
+      <h1>Politique de confidentialité</h1>
+      <div class="date">Dernière mise à jour : 28 février 2026</div>
+    </div>
+
+    <div class="section">
+      <div class="highlight">
+        <p><strong>En résumé :</strong> DenivMax ne collecte aucune donnée personnelle, ne les vend pas, ne les partage pas. Tout reste sur ton iPhone.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>1. Données collectées</h2>
+      <p>DenivMax ne collecte <strong>aucune donnée personnelle</strong> et ne dispose d'aucun serveur externe.</p>
+      <p>Les seules données utilisées par l'application sont :</p>
+      <ul>
+        <li><strong>Données de santé (HealthKit)</strong> : séances sportives, dénivelé positif, calories, distance — uniquement si tu accordes l'autorisation explicite. Ces données ne quittent jamais ton appareil.</li>
+        <li><strong>Préférences utilisateur</strong> : poids, objectifs, réglages de l'app — stockées localement sur ton iPhone via UserDefaults.</li>
+        <li><strong>Historique des séances</strong> : enregistrements de tes activités — stockés localement sur ton iPhone.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>2. Utilisation des données</h2>
+      <p>Les données sont utilisées exclusivement pour :</p>
+      <ul>
+        <li>Calculer et afficher tes statistiques de dénivelé</li>
+        <li>Estimer tes calories brûlées</li>
+        <li>Suivre ta progression vers tes objectifs</li>
+        <li>Afficher l'historique de tes séances</li>
+      </ul>
+      <p>Aucune donnée n'est envoyée à des serveurs tiers, ni utilisée à des fins publicitaires ou analytiques.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Apple HealthKit</h2>
+      <p>DenivMax peut accéder à Apple HealthKit pour lire tes séances sportives et récupérer les données de dénivelé.</p>
+      <div class="highlight">
+        <p>Les données HealthKit ne sont jamais partagées avec des tiers. Elles ne sont jamais utilisées à des fins publicitaires, marketing ou de recherche. Elles restent sur ton appareil.</p>
+      </div>
+      <p>Tu peux révoquer l'accès à tout moment dans : <strong>Réglages → Santé → Accès aux données → DenivMax</strong>.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. Achats intégrés</h2>
+      <p>DenivMax propose un abonnement PRO via les achats intégrés Apple (StoreKit). Les transactions sont entièrement gérées par Apple. DenivMax ne traite ni ne stocke aucune information de paiement.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Aucun partage avec des tiers</h2>
+      <p>DenivMax ne partage, ne vend et ne transfère aucune donnée à des tiers. L'application ne contient aucun SDK publicitaire, aucun outil d'analytics, aucun tracker.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Sécurité</h2>
+      <p>Toutes les données sont stockées localement sur ton iPhone et protégées par les mécanismes de sécurité iOS. DenivMax ne dispose d'aucun accès à distance à ton appareil.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Enfants</h2>
+      <p>DenivMax ne collecte aucune donnée sur les utilisateurs, y compris les mineurs. L'application est conforme aux exigences de la COPPA et du RGPD.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Modifications</h2>
+      <p>Cette politique peut être mise à jour si de nouvelles fonctionnalités sont ajoutées. La date de mise à jour sera toujours indiquée en haut de cette page.</p>
+    </div>
+
+    <div class="section">
+      <h2>9. Contact</h2>
+      <div class="contact-card">
+        <p>Pour toute question concernant cette politique de confidentialité :</p>
+        <p style="margin-top: 12px;">📧 <a href="mailto:contact@denivmax.app">contact@denivmax.app</a></p>
+        <p style="margin-top: 4px; color: rgba(255,255,255,0.4); font-size: 14px;">(Remplace par ton adresse email réelle)</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2026 DenivMax — Tous droits réservés
+    </div>
+
+  </div>
+</body>
+</html>
