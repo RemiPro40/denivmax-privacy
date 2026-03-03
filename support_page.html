@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DenivMax — Support</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; color: #1d1d1f; }
+
+    header { background: #000; padding: 20px 40px; display: flex; align-items: center; gap: 14px; }
+    header .logo-circle { width: 44px; height: 44px; background: linear-gradient(135deg, #FF6B00, #FF3D00); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+    header h1 { font-size: 22px; font-weight: 700; color: #fff; }
+    header span { font-size: 13px; color: rgba(255,255,255,0.4); margin-left: 4px; }
+
+    nav { background: #fff; border-bottom: 1px solid #e5e5e5; display: flex; padding: 0 40px; }
+    nav a { text-decoration: none; font-size: 14px; font-weight: 500; color: #666; padding: 16px 20px; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #FF6B00; border-bottom-color: #FF6B00; }
+
+    .hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%); padding: 60px 40px; text-align: center; }
+    .hero h2 { font-size: 38px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .hero h2 span { color: #FF6B00; }
+    .hero p { font-size: 16px; color: rgba(255,255,255,0.45); }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+
+    .section-title { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+    .section-sub { font-size: 15px; color: #6e6e73; margin-bottom: 28px; }
+
+    .support-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
+    .card { background: #fff; border-radius: 18px; padding: 28px; border: 1px solid #e5e5e5; }
+    .card-icon { font-size: 30px; margin-bottom: 12px; }
+    .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: #6e6e73; line-height: 1.6; }
+    .card a { color: #FF6B00; text-decoration: none; font-weight: 600; }
+
+    .contact-box { background: #fff; border-radius: 18px; padding: 36px; border: 1px solid #e5e5e5; margin-bottom: 48px; text-align: center; }
+    .contact-box h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+    .contact-box p { font-size: 15px; color: #6e6e73; margin-bottom: 24px; }
+    .email-btn { display: inline-block; background: #FF6B00; color: #fff; padding: 14px 36px; border-radius: 50px; font-size: 15px; font-weight: 700; text-decoration: none; }
+    .response-time { margin-top: 16px; font-size: 13px; color: #aaa; }
+
+    .faq-item { background: #fff; border-radius: 14px; padding: 24px 28px; margin-bottom: 12px; border: 1px solid #e5e5e5; }
+    .faq-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .faq-item p { font-size: 14px; color: #6e6e73; line-height: 1.6; }
+
+    .divider { height: 1px; background: #e5e5e5; margin: 60px 0; }
+
+    .privacy-block { background: #fff; border-radius: 18px; padding: 32px; border: 1px solid #e5e5e5; margin-bottom: 16px; }
+    .privacy-block h3 { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+    .privacy-block p, .privacy-block li { font-size: 14px; color: #6e6e73; line-height: 1.7; }
+    .privacy-block ul { padding-left: 20px; }
+    .privacy-block li { margin-bottom: 6px; }
+
+    .no-data-badge { display: inline-flex; align-items: center; gap: 8px; background: #e8f5e9; color: #2e7d32; padding: 8px 16px; border-radius: 40px; font-size: 13px; font-weight: 700; margin-bottom: 20px; }
+
+    footer { background: #000; padding: 32px 40px; text-align: center; color: rgba(255,255,255,0.3); font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    footer a:hover { color: #FF6B00; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-circle">🏔️</div>
+  <div><h1>DenivMax <span>— Support</span></h1></div>
+</header>
+
+<nav>
+  <a href="#support" class="active">Support</a>
+  <a href="#faq">FAQ</a>
+  <a href="#privacy">Confidentialité</a>
+</nav>
+
+<div class="hero">
+  <h2>Comment pouvons-nous <span>t'aider ?</span></h2>
+  <p>Support officiel pour l'app DenivMax — iOS</p>
+</div>
+
+<div class="container">
+
+  <section id="support">
+    <div class="section-title">Support</div>
+    <div class="section-sub">Une question sur l'app ? On est là pour t'aider.</div>
+
+    <div class="support-cards">
+      <div class="card">
+        <div class="card-icon">📧</div>
+        <h3>Par email</h3>
+        <p>Envoie-nous un message, nous répondons sous 48h.<br><a href="mailto:contact@denivmax.app">contact@denivmax.app</a></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Confidentialité</h3>
+        <p>Questions sur tes données personnelles ?<br><a href="#privacy">Voir notre politique</a></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏥</div>
+        <h3>Import Santé</h3>
+        <p>Réglages iPhone → Santé → Accès aux données → DenivMax → autoriser Séances.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">👑</div>
+        <h3>Abonnement PRO</h3>
+        <p>Pour toute question sur l'abonnement ou un remboursement, contacte-nous par email.</p>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <h3>Contacter le support</h3>
+      <p>Notre équipe répond à toutes tes questions concernant DenivMax.</p>
+      <a href="mailto:contact@denivmax.app" class="email-btn">✉️ Envoyer un message</a>
+      <div class="response-time">Temps de réponse : sous 48h</div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-title">Questions fréquentes</div>
+    <div class="section-sub">Les réponses aux questions les plus courantes.</div>
+
+    <div class="faq-item">
+      <h4>Comment importer mes séances depuis Apple Santé ?</h4>
+      <p>Va dans l'app DenivMax → onglet Historique → bouton "Import Santé". Autorise l'accès si demandé. Tes séances trail, running et randonnée apparaîtront automatiquement.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Pourquoi mon dénivelé affiche 0m ?</h4>
+      <p>Certaines montres ne transmettent pas le D+ à Apple Santé. DenivMax essaie plusieurs sources (metadata, statistiques, route GPS). Si aucune donnée n'est disponible, le D+ sera à 0.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Comment annuler mon abonnement PRO ?</h4>
+      <p>Réglages iPhone → ton nom → Abonnements → DenivMax → Annuler l'abonnement. Tu peux aussi nous écrire à contact@denivmax.app.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Mes données sont-elles partagées ?</h4>
+      <p>Non. Toutes tes données restent sur ton appareil. DenivMax ne collecte aucune donnée personnelle et ne partage rien avec des tiers.</p>
+    </div>
+    <div class="faq-item">
+      <h4>L'app est-elle compatible Apple Watch ?</h4>
+      <p>DenivMax importe les données enregistrées par Apple Santé, compatibles avec toutes les Apple Watch. L'app iOS est requise.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="privacy">
+    <div class="section-title">Politique de confidentialité</div>
+    <div class="section-sub">Dernière mise à jour : 1er mars 2026</div>
+
+    <div class="no-data-badge">✅ Aucune donnée personnelle collectée</div>
+
+    <div class="privacy-block">
+      <h3>📋 Résumé</h3>
+      <p>DenivMax ne collecte, ne stocke et ne transmet aucune donnée personnelle. Toutes les données restent sur votre appareil et ne sont jamais partagées avec des tiers.</p>
+    </div>
+    <div class="privacy-block">
+      <h3>🏥 Données HealthKit</h3>
+      <p>DenivMax accède aux données suivantes via Apple HealthKit, uniquement avec votre autorisation explicite :</p>
+      <ul>
+        <li>Séances d'entraînement (type, durée, distance)</li>
+        <li>Dénivelé positif</li>
+        <li>Calories actives dépensées</li>
+      </ul>
+      <p style="margin-top:12px;">Ces données sont utilisées uniquement pour afficher vos statistiques dans l'app. Elles ne quittent jamais votre appareil.</p>
+    </div>
+    <div class="privacy-block">
+      <h3>💳 Achats in-app</h3>
+      <p>Les achats sont gérés exclusivement par Apple via le système d'achat in-app standard. DenivMax ne stocke aucune information de paiement.</p>
+    </div>
+    <div class="privacy-block">
+      <h3>📡 Partage des données</h3>
+      <p>DenivMax ne partage aucune donnée avec des tiers. Aucun SDK publicitaire, aucun outil d'analytics, aucune transmission vers des serveurs externes.</p>
+    </div>
+    <div class="privacy-block">
+      <h3>📬 Contact</h3>
+      <p>Pour toute question : <a href="mailto:contact@denivmax.app" style="color:#FF6B00;font-weight:600;">contact@denivmax.app</a></p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Rémi Nagiscarde — DenivMax &nbsp;·&nbsp; <a href="mailto:contact@denivmax.app">contact@denivmax.app</a></p>
+</footer>
+
+</body>
+</html>
