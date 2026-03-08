@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conditions Générales d'Utilisation — Jour d'Avant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bleu-nuit: #0b0d1a;
+      --bleu-fonce: #0f1225;
+      --or: #C9A84C;
+      --or-clair: #E2C97E;
+      --blanc: #f5f3ee;
+      --gris: #8a8fa8;
+      --gris-clair: #c5c8d6;
+      --bordure: rgba(201, 168, 76, 0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bleu-nuit);
+      color: var(--blanc);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* Glow top */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(201,168,76,0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid var(--bordure);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #1a1f3a, #0f1225);
+      border: 1px solid var(--bordure);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: var(--or);
+      font-weight: 700;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: var(--blanc);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text span {
+      color: var(--or);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 40px 100px;
+    }
+
+    .hero {
+      margin-bottom: 56px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--bordure);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--or);
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--blanc);
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--gris);
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .meta span::before {
+      content: '·';
+      margin-right: 8px;
+      color: var(--or);
+      opacity: 0.6;
+    }
+
+    .meta span:first-child::before { display: none; }
+
+    /* Sommaire */
+    .sommaire {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--bordure);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+    }
+
+    .sommaire-titre {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 16px;
+    }
+
+    .sommaire ol {
+      list-style: none;
+      counter-reset: sommaire;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 32px;
+    }
+
+    @media (max-width: 560px) {
+      .sommaire ol { grid-template-columns: 1fr; }
+    }
+
+    .sommaire li {
+      counter-increment: sommaire;
+      font-size: 13px;
+      color: var(--gris-clair);
+    }
+
+    .sommaire li::before {
+      content: counter(sommaire, decimal-leading-zero) ". ";
+      color: var(--or);
+      opacity: 0.7;
+      font-weight: 500;
+      margin-right: 4px;
+    }
+
+    .sommaire a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .sommaire a:hover { color: var(--or-clair); }
+
+    /* Sections */
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 24px;
+    }
+
+    .section-num {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--or);
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--blanc);
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--gris-clair);
+      margin-bottom: 16px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    li {
+      font-size: 15px;
+      color: var(--gris-clair);
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--or);
+      opacity: 0.5;
+      font-size: 12px;
+      top: 9px;
+    }
+
+    strong {
+      color: var(--blanc);
+      font-weight: 500;
+    }
+
+    .highlight-box {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-left: 3px solid var(--or);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    a {
+      color: var(--or-clair);
+      text-decoration: underline;
+      text-decoration-color: rgba(226,201,126,0.3);
+      transition: text-decoration-color 0.2s;
+    }
+
+    a:hover { text-decoration-color: var(--or-clair); }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--bordure);
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: gap;
+      gap: 16px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--gris);
+      margin: 0;
+    }
+
+    footer a {
+      font-size: 12px;
+      color: var(--gris);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--or-clair); }
+
+    @media (max-width: 600px) {
+      header, footer { padding: 20px 24px; }
+      main { padding: 40px 24px 80px; }
+      .sommaire { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-icon">J</div>
+    <div class="logo-text">Jour d'<span>Avant</span></div>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <div class="tag">Document légal</div>
+      <h1>Conditions Générales d'Utilisation</h1>
+      <div class="meta">
+        <span>Dernière mise à jour : 8 mars 2026</span>
+        <span>Version 1.0</span>
+        <span>Rémi Nagiscarde</span>
+      </div>
+    </div>
+
+    <div class="sommaire">
+      <div class="sommaire-titre">Sommaire</div>
+      <ol>
+        <li><a href="#presentation">Présentation de l'application</a></li>
+        <li><a href="#acceptation">Acceptation des CGU</a></li>
+        <li><a href="#acces">Accès et compte utilisateur</a></li>
+        <li><a href="#abonnements">Abonnements et paiements</a></li>
+        <li><a href="#contenu">Contenu de l'application</a></li>
+        <li><a href="#propriete">Propriété intellectuelle</a></li>
+        <li><a href="#donnees">Données personnelles</a></li>
+        <li><a href="#responsabilite">Limitation de responsabilité</a></li>
+        <li><a href="#resiliation">Résiliation</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </div>
+
+    <section id="presentation">
+      <div class="section-num">Article 01</div>
+      <h2>Présentation de l'application</h2>
+      <p><strong>Jour d'Avant</strong> est une application mobile iOS éditée par <strong>Rémi Nagiscarde</strong>, développeur indépendant domicilié en France.</p>
+      <p>L'application permet aux utilisateurs de découvrir chaque jour des événements historiques survenus à la même date dans les années passées, d'accéder à des anecdotes, du contenu culturel, sportif et politique, et de sauvegarder leurs événements favoris.</p>
+      <p>L'application est disponible sur l'App Store d'Apple et est destinée à un public adulte ou sous supervision parentale.</p>
+    </section>
+
+    <section id="acceptation">
+      <div class="section-num">Article 02</div>
+      <h2>Acceptation des CGU</h2>
+      <p>Le téléchargement, l'installation ou l'utilisation de l'application Jour d'Avant implique l'acceptation pleine et entière des présentes Conditions Générales d'Utilisation.</p>
+      <p>Si vous n'acceptez pas ces conditions, vous êtes invité(e) à ne pas utiliser l'application et à la désinstaller de votre appareil.</p>
+      <p>Ces CGU peuvent être modifiées à tout moment. Les utilisateurs seront informés de toute modification substantielle. La poursuite de l'utilisation de l'application après modification vaut acceptation des nouvelles conditions.</p>
+    </section>
+
+    <section id="acces">
+      <div class="section-num">Article 03</div>
+      <h2>Accès et compte utilisateur</h2>
+      <p>L'application Jour d'Avant ne nécessite pas de création de compte pour accéder aux fonctionnalités de base. L'accès aux fonctionnalités Premium (Pro) nécessite la souscription d'un abonnement via l'App Store d'Apple.</p>
+      <p>L'utilisateur est responsable de son appareil et de l'accès à celui-ci. Toute utilisation de l'application depuis votre appareil est réputée effectuée par vous.</p>
+    </section>
+
+    <section id="abonnements">
+      <div class="section-num">Article 04</div>
+      <h2>Abonnements et paiements</h2>
+      <p>Jour d'Avant propose un abonnement <strong>Pro</strong> donnant accès à des fonctionnalités avancées, disponible en deux formules :</p>
+      <ul>
+        <li><strong>Mensuel</strong> — renouvelé chaque mois</li>
+        <li><strong>Annuel</strong> — renouvelé chaque année, avec économie par rapport à l'offre mensuelle</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p>Les prix exacts sont affichés dans l'application et varient selon votre pays et votre devise locale. Les tarifs sont gérés par Apple via l'App Store.</p>
+      </div>
+
+      <p><strong>Renouvellement automatique :</strong> Les abonnements se renouvellent automatiquement à la fin de chaque période, sauf résiliation au moins 24 heures avant la date de renouvellement.</p>
+      <p><strong>Gestion et résiliation :</strong> Vous pouvez gérer votre abonnement et le résilier à tout moment depuis les Réglages de votre iPhone → votre identifiant Apple → Abonnements.</p>
+      <p><strong>Remboursement :</strong> Conformément aux politiques d'Apple, aucun remboursement ne sera effectué pour la période d'abonnement en cours, sauf demande auprès du support Apple.</p>
+      <p><strong>Essai gratuit :</strong> Si une période d'essai est proposée, elle sera clairement indiquée dans l'application. Tout abonnement non résilié avant la fin de la période d'essai sera automatiquement converti en abonnement payant.</p>
+    </section>
+
+    <section id="contenu">
+      <div class="section-num">Article 05</div>
+      <h2>Contenu de l'application</h2>
+      <p>Le contenu fourni par Jour d'Avant (événements historiques, anecdotes, descriptions) est fourni à titre informatif et culturel. Bien que nous nous efforcions d'assurer l'exactitude des informations, nous ne garantissons pas l'exhaustivité ou la précision absolue des contenus.</p>
+      <p>L'application est destinée à un usage personnel et non commercial. Il est interdit de :</p>
+      <ul>
+        <li>Reproduire ou redistribuer le contenu de l'application sans autorisation écrite</li>
+        <li>Utiliser l'application à des fins commerciales sans accord préalable</li>
+        <li>Tenter de contourner les mécanismes de protection de l'application</li>
+        <li>Extraire automatiquement des données de l'application (scraping)</li>
+      </ul>
+    </section>
+
+    <section id="propriete">
+      <div class="section-num">Article 06</div>
+      <h2>Propriété intellectuelle</h2>
+      <p>L'application Jour d'Avant, son interface, son design, ses illustrations, ses icônes, son code source et l'ensemble de ses contenus originaux sont la propriété exclusive de <strong>Rémi Nagiscarde</strong> et sont protégés par les lois françaises et internationales relatives à la propriété intellectuelle.</p>
+      <p>Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie de l'application, sans l'autorisation écrite préalable de l'éditeur, est strictement interdite.</p>
+    </section>
+
+    <section id="donnees">
+      <div class="section-num">Article 07</div>
+      <h2>Données personnelles</h2>
+      <p>Jour d'Avant ne collecte aucune donnée personnelle identifiable. L'application fonctionne sans compte utilisateur et ne transmet aucune donnée à des serveurs tiers à des fins publicitaires ou commerciales.</p>
+      <p>Les données relatives aux abonnements sont gérées exclusivement par Apple via l'App Store et sont soumises à la politique de confidentialité d'Apple.</p>
+      <p>Pour plus d'informations, consultez notre <a href="https://jourdavant.app/confidentialite">Politique de Confidentialité</a>.</p>
+    </section>
+
+    <section id="responsabilite">
+      <div class="section-num">Article 08</div>
+      <h2>Limitation de responsabilité</h2>
+      <p>L'application est fournie "telle quelle", sans garantie d'aucune sorte. Dans les limites autorisées par la loi applicable, Rémi Nagiscarde ne saurait être tenu responsable :</p>
+      <ul>
+        <li>Des interruptions ou dysfonctionnements de l'application</li>
+        <li>Des inexactitudes dans les contenus historiques fournis</li>
+        <li>De tout dommage direct ou indirect résultant de l'utilisation de l'application</li>
+        <li>De la perte de données sur votre appareil</li>
+      </ul>
+      <p>La responsabilité de l'éditeur ne peut excéder le montant payé par l'utilisateur pour l'abonnement au cours des 12 derniers mois.</p>
+    </section>
+
+    <section id="resiliation">
+      <div class="section-num">Article 09</div>
+      <h2>Résiliation</h2>
+      <p>Vous pouvez cesser d'utiliser l'application à tout moment en la désinstallant de votre appareil.</p>
+      <p>Pour résilier votre abonnement Pro, rendez-vous dans <strong>Réglages iPhone → [votre nom] → Abonnements → Jour d'Avant</strong> et sélectionnez "Annuler l'abonnement".</p>
+      <p>L'éditeur se réserve le droit de suspendre ou résilier l'accès à l'application en cas de violation des présentes CGU, sans préavis ni remboursement.</p>
+    </section>
+
+    <section id="contact">
+      <div class="section-num">Article 10</div>
+      <h2>Contact</h2>
+      <p>Pour toute question relative aux présentes CGU ou à l'application, vous pouvez nous contacter :</p>
+      <ul>
+        <li><strong>Site web :</strong> <a href="https://jourdavant.app">jourdavant.app</a></li>
+        <li><strong>Éditeur :</strong> Rémi Nagiscarde</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p><strong>Droit applicable :</strong> Les présentes CGU sont soumises au droit français. Tout litige sera soumis à la compétence exclusive des tribunaux français.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Rémi Nagiscarde — Jour d'Avant</p>
+    <div style="display:flex; gap: 24px;">
+      <a href="https://jourdavant.app/confidentialite">Politique de confidentialité</a>
+      <a href="https://jourdavant.app">Accueil</a>
+    </div>
+  </footer>
+
+</body>
+</html>
